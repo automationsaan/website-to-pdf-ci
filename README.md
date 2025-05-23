@@ -1,8 +1,3 @@
-# Overview
-
-This repository is an integral part of the learning project designed for training purposes. It contains the application code and its CI for integration into the infrastructure described in this repository:
-https://github.com/tntk-io/tntk-infra
-
 # Application definition and overview
 This is a learning application that is designed for those who are learning DevOps. The application itself, like the entire project, is intended to cover a broader scope under the hood. The application's main task, consisting of frontend and backend, is to convert requested HTML pages to PDF and save these files with the possibility of having convenient authorized access to these objects through UI. It looks simple, but in the path of the whole operations cycle, we face several services from the world of AWS: RDS, SQS Lambda, DynamoDB, and S3.
 
@@ -199,9 +194,9 @@ Repositories themselves for CI/CD.
 
 
 
-After deploying infrastructure from https://github.com/tntk-io/tntk-infra repository we moving to application section. In this section we will deploy our application to our infastructure.
+After deploying infrastructure from https://github.com/automationsaan/website-to-pdf-infra repository we moving to application section. In this section we will deploy our application to our infastructure.
 
-> Make sure that you have created the <b>CD repository</b> (in our case tntk-io/tntk-cd) before stat CI. This repository should not be public since it performs operational load and contains manifests with information that should not be distributed. It is necessary to create two branches in this repository: dev and prod.
+> Make sure that you have created the <b>CD repository</b> (in our case automation/website-to-pdf-cd) before stat CI. This repository should not be public since it performs operational load and contains manifests with information that should not be distributed. It is necessary to create two branches in this repository: dev and prod.
 
 1. Add Github secret to Repository Settings → Secrets and variables → Actions → Secrets ("API_TOKEN_GITHUB" with Github token as value).
 2. Add Github variables to Repository Settings → Secrets and variables → Actions → Variables ("ACCOUNT_ID", "APPLICATION_NAME", "APPLICATION_NAMESPACE", "AWS_REGION", "BASE_DOMAIN", "CD_DESTINATION_OWNER", "CD_PROJECT").
